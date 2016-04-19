@@ -1,15 +1,8 @@
-# Meme (Data Desk remix)
+# Meme (Metro remix)
 
 Meme is a generator that Vox Media uses to create social sharing images. See working version at [http://www.sbnation.com/a/meme](http://www.sbnation.com/a/meme).
 
-This is the Los Angeles Times Data Desk's fork. Here is what we added:
-
-- Options to change the image's aspect ratio
-- Options to set a solid background color
-- Los Angeles Times fonts
-- Los Angeles Times watermarks
-- Linebreaks allowed in the headlines
-- Deployment script to build static site inside newsroom VPN
+This is the Metro Swedens fork based on the Los Angeles Times fork.
 
 ![screenshot](readme.png)
 
