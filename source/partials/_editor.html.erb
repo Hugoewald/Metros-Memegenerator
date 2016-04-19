@@ -1,0 +1,68 @@
+<form class="m-editor" id="meme-editor-view">
+
+  <fieldset class="m-fieldset">
+      <h2>Bakgrund</h2>
+      <h3><label for="background-color">Välj en grundfärg...</label></h3>
+      <div class="m-editor__background-color" id="background-color">
+        <ul class="checkbox-group">
+          <li><label><input type="radio" name="background-color" value=""> Ingen</label></li>
+        </ul>
+      </div>
+
+      <h3><label for="dropzone">... Eller en bakgrundbild</label></h3>
+      <div class="dropzone" id="dropzone">Dra en fil till det här fältet.</div>
+
+      <h3><label for="image-scale">Ändra storleken på bilden</label></h3>
+      <input id="image-scale" type="range" max="4" min=".01" step=".01" value="1">
+
+      <div class="m-editor__overlay" id="overlay">
+        <h3><label for="overlay">Välj ett filter</label></h3>
+        <ul class="checkbox-group">
+          <li><label><input type="radio" name="overlay" value=""> Inget</label></li>
+        </ul>
+      </div>
+      <div style="clear:both; height:1em;"></div>
+  </fieldset>
+
+  <fieldset class="m-fieldset">
+    <h2>Text</h2>
+
+    <textarea id="headline" name="headline" type="text" value=""></textarea>
+
+    <select class="text-align" id="text-align">
+        <option value="" disabled>Välj textjustering</option>
+    </select>
+
+    <select class="font-size" id="font-size">
+    <option value="" disabled>Välj textstorlek</option>
+    </select>
+
+    <select class="font-family" id="font-family">
+    <option value="" disabled>Välj typsnitt</option>
+    </select>
+
+    <select class="font-color" id="font-color">
+    <option value="" disabled>Välj textfärg</option>
+    </select>
+
+    <div class="checkbox-group text-shadow">
+    <input id="text-shadow" name="shadow" type="checkbox">
+    <label for="text-shadow">Textskugga</label>
+    </div>
+
+    <select class="watermark" id="watermark">
+    <option value="watermark" disabled>Välj logo</option>
+    </select>
+
+    <h3><label for="credit">Vem sa det?</label></h3>
+    <input id="credit" name="credit" type="text" value="">
+  </fieldset>
+
+  <fieldset class="m-fieldset">
+        <h2>Storlek</h2>
+        <select class="aspect-ratio" id="aspect-ratio">
+            <option value="" disabled>Välj bildupplösning</option>
+        </select>
+  </fieldset>
+
+</form>

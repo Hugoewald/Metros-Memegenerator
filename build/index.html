@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+  <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1">
+<!-- Always force latest IE rendering engine or request Chrome Frame -->
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<title>Meme generator - Los Angeles Times</title>
+<link rel="stylesheet" type="text/css" href="http://d1qqc1e9kvmdh8.cloudfront.net/css/ngux-tophat-0.3.10.min.css">
+<link href="/stylesheets/main-4b9f363c.css" rel="stylesheet" type="text/css" />
+<meta name="description" content="" />
+
+  </head>
+  <body class="index">
+    <div class="ricky">
+    <img class="rickroll" src="images/metro-6c39ef73.png"> <h1>Metros bildgenerator</h1>
+    </div>
+    <div class="clear"></div>
+
+    <div class="m-meme">
+      <form class="m-editor" id="meme-editor-view">
+
+  <fieldset class="m-fieldset">
+      <h2>Bakgrund</h2>
+      <h3><label for="background-color">Välj en grundfärg...</label></h3>
+      <div class="m-editor__background-color" id="background-color">
+        <ul class="checkbox-group">
+          <li><label><input type="radio" name="background-color" value=""> Ingen</label></li>
+        </ul>
+      </div>
+
+      <h3><label for="dropzone">... Eller en bakgrundbild</label></h3>
+      <div class="dropzone" id="dropzone">Dra en fil till det här fältet.</div>
+
+      <h3><label for="image-scale">Ändra storleken på bilden</label></h3>
+      <input id="image-scale" type="range" max="4" min=".01" step=".01" value="1">
+
+      <div class="m-editor__overlay" id="overlay">
+        <h3><label for="overlay">Välj ett filter</label></h3>
+        <ul class="checkbox-group">
+          <li><label><input type="radio" name="overlay" value=""> Inget</label></li>
+        </ul>
+      </div>
+      <div style="clear:both; height:1em;"></div>
+  </fieldset>
+
+  <fieldset class="m-fieldset">
+    <h2>Text</h2>
+
+    <textarea id="headline" name="headline" type="text" value=""></textarea>
+
+    <select class="text-align" id="text-align">
+        <option value="" disabled>Välj textjustering</option>
+    </select>
+
+    <select class="font-size" id="font-size">
+    <option value="" disabled>Välj textstorlek</option>
+    </select>
+
+    <select class="font-family" id="font-family">
+    <option value="" disabled>Välj typsnitt</option>
+    </select>
+
+    <select class="font-color" id="font-color">
+    <option value="" disabled>Välj textfärg</option>
+    </select>
+
+    <div class="checkbox-group text-shadow">
+    <input id="text-shadow" name="shadow" type="checkbox">
+    <label for="text-shadow">Textskugga</label>
+    </div>
+
+    <select class="watermark" id="watermark">
+    <option value="watermark" disabled>Välj logo</option>
+    </select>
+
+    <h3><label for="credit">Vem sa det?</label></h3>
+    <input id="credit" name="credit" type="text" value="">
+  </fieldset>
+
+  <fieldset class="m-fieldset">
+        <h2>Storlek</h2>
+        <select class="aspect-ratio" id="aspect-ratio">
+            <option value="" disabled>Välj bildupplösning</option>
+        </select>
+  </fieldset>
+
+</form>
+
+      <div class="m-canvas" id="meme-canvas-view">
+  <div class="m-canvas__canvas" id="meme-canvas">
+    <noscript>Sorry, this tool requires a canvas-enabled browser. Try Google Chrome.</noscript>
+  </div>
+  <p class="m-canvas__download">
+    <a href="#" download="dela.png" id="meme-download">Ladda ned bilden</a>
+  </p>
+</div>
+
+    </div>
+    <script src="/javascripts/application-8a2c8581.js" type="text/javascript"></script>
+    <script src="/javascripts/settings-e2b5d4b1.js" type="text/javascript"></script>
+  </body>
+</html>

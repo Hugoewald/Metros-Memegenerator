@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+  <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+    <%= partial "partials/head" %>
+  </head>
+  <body class="<%= page_classes %>">
+    <div class="ricky">
+    <img class="rickroll" src="../../images/metro.png"> <h1>Metros bildgenerator (beta)</h1>
+    </div>
+    <div class="clear"></div>
+
+    <div class="m-meme">
+      <%= partial "partials/editor" %>
+      <%= partial "partials/canvas" %>
+    </div>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'settings' %>
+  </body>
+</html>
