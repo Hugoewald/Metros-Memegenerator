@@ -6,7 +6,7 @@ This is the Metro Swedens fork based on the Los Angeles Times fork.
 
 ![screenshot](readme.png)
 
-How to deploy (at the LA Times)
+How to deploy 
 -------------------------------
 
 **Edit the ``source`` directory to make the changes you want**
@@ -36,10 +36,4 @@ $ git add .
 $ git commit -m "A precise message goes here"
 # Push it up to GitHub
 $ git push origin master
-```
-
-**Deploy your changes to our production server under Ben's desk**
-
-```bash
-$ fab deploy
 ```
