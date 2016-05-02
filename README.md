@@ -4,6 +4,8 @@ Meme is a generator that Vox Media uses to create social sharing images. See wor
 
 This is the Metro Swedens fork based on the Los Angeles Times fork.
 
+A usable version can be found at [http://www.hugoewald.se/meme](http://www.hugoewald.se/meme).
+
 ![screenshot](readme.png)
 
 How to deploy 
