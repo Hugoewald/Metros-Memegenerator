@@ -12,6 +12,13 @@
       <h3><label for="dropzone">... Eller en bakgrundbild</label></h3>
       <div class="dropzone" id="dropzone">Dra en fil till det här fältet.</div>
 
+      <fieldset class="m-fieldset">
+            <h2>Storlek</h2>
+            <select class="aspect-ratio" id="aspect-ratio">
+                <option value="" disabled>Välj bildupplösning</option>
+            </select>
+      </fieldset>
+
       <h3><label for="image-scale">Ändra storleken på bilden</label></h3>
       <input id="image-scale" type="range" max="4" min=".01" step=".01" value="1">
 
@@ -56,13 +63,6 @@
 
     <h3><label for="credit">Vem sa det?</label></h3>
     <input id="credit" name="credit" type="text" value="">
-  </fieldset>
-
-  <fieldset class="m-fieldset">
-        <h2>Storlek</h2>
-        <select class="aspect-ratio" id="aspect-ratio">
-            <option value="" disabled>Välj bildupplösning</option>
-        </select>
   </fieldset>
 
 </form>
