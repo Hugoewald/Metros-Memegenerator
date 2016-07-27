@@ -1,8 +1,7 @@
 # Meme (Metro remix)
 
-Meme is a generator that Vox Media uses to create social sharing images. See working version at [http://www.sbnation.com/a/meme](http://www.sbnation.com/a/meme).
-
-This is the Metro Swedens fork based on the Los Angeles Times fork.
+Meme is a generator to create social sharing images.
+This is the Metro Swedens fork based on the Los Angeles Times fork of Vox Medias original.
 
 A usable version can be found at [http://www.hugoewald.se/meme](http://www.hugoewald.se/meme).
 
