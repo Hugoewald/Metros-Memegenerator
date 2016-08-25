@@ -167,6 +167,91 @@ MEME.MemeCanvasView = Backbone.View.extend({
       ctx.shadowColor = 'transparent';
     }
 
+    function renderText(ctx) {
+      var maxWidth = Math.round(d.width * 0.50);
+      var x = padding;
+      var y = padding;
+
+      ctx.font = d.TextSize +'pt '+ d.fontFamily;
+      ctx.fillStyle = d.fontColor;
+      ctx.textBaseline = 'middle';
+
+      // Text shadow:
+      if (d.textShadow) {
+        ctx.shadowColor = "black";
+        ctx.shadowOffsetX = -2;
+        ctx.shadowOffsetY = 1;
+        ctx.shadowBlur = 10;
+      }
+
+      // Text alignment:
+      if (d.textAlign == 'center') {
+        ctx.textAlign = 'center';
+        x = d.width / 2;
+        y = d.height - d.height / 2.75;
+        maxWidth = d.width - d.width / 3;
+      } else if (d.textAlign == 'right' ) {
+        ctx.textAlign = 'right';
+        x = d.width - padding;
+          y = d.height - d.height / 1.5;
+      } else {
+        ctx.textAlign = 'left';
+          y = d.height - d.height / 1.5;
+      }
+
+      var lineheight = 1.2;
+      var words = d.MainText.split(' ');
+
+      /* Clear out any empty strings that have snuck in */
+      var words = _.filter(
+          words, function(e){ return e != "" }
+      );
+
+      /* Allow linebreaks by catching newlines and sticking them back in list */
+      var linebreak = /\r|\n/;
+      var wordsAndBreaks = [];
+      _.each(words, function(bit) {
+            if (linebreak.exec(bit)) {
+                var split = bit.split(linebreak);
+                _.each(split, function(element, index) {
+                    wordsAndBreaks.push(element);
+                    if (index+1 != split.length) {
+                        wordsAndBreaks.push("\n");
+                    }
+                })
+            } else {
+                wordsAndBreaks.push(bit);
+            }
+      });
+
+      /* Clear out any empty strings that have snuck in */
+      var wordsAndBreaks = _.filter(
+          wordsAndBreaks, function(e){ return e != "" }
+      );
+
+      var line  = '';
+      _.each(wordsAndBreaks, function(bit, index) {
+            if (bit == "\n") {
+                ctx.fillText(line, x, y);
+                line = '';
+                y += Math.round(d.fontSize * lineheight);
+            } else {
+                var testLine  = line + bit + ' ';
+                var metrics   = ctx.measureText(testLine);
+                var testWidth = metrics.width;
+                if (testWidth > maxWidth && index > 0) {
+                  ctx.fillText(line, x, y);
+                  line = bit + ' ';
+                  y += Math.round(d.fontSize * lineheight);
+                } else {
+                  line = testLine;
+                }
+            }
+      });
+      ctx.fillText(line, x, y);
+      ctx.shadowColor = 'transparent';
+    }
+
     function renderCredit(ctx) {
       ctx.textBaseline = 'bottom';
       ctx.textAlign = 'left';
@@ -201,6 +286,7 @@ MEME.MemeCanvasView = Backbone.View.extend({
     renderBackgroundColor(ctx);
     renderOverlay(ctx);
     renderHeadline(ctx);
+    renderText(ctx);
     renderCredit(ctx);
     renderWatermark(ctx);
 

@@ -41,6 +41,10 @@ MEME.MemeEditorView = Backbone.View.extend({
     if (d.fontSizeOpts && d.fontSizeOpts.length) {
       $('#font-size').append(buildOptions(d.fontSizeOpts)).show();
     }
+    // Build Main font size options:
+    if (d.TextSizeOpts && d.TextSizeOpts.length) {
+      $('#text-size').append(buildOptions(d.TextSizeOpts)).show();
+    }
 
     // Build font color options:
     if (d.fontColorOpts && d.fontColorOpts.length) {
@@ -80,10 +84,12 @@ MEME.MemeEditorView = Backbone.View.extend({
   render: function() {
     var d = this.model.toJSON();
     this.$('#headline').val(d.headlineText);
+    this.$('#text').val(d.MainText);
     this.$('#credit').val(d.creditText);
     this.$('#watermark').val(d.watermarkSrc);
     this.$('#image-scale').val(d.imageScale);
     this.$('#font-size').val(d.fontSize);
+    this.$('#text-size').val(d.TextSize);
     this.$('#font-color').val(d.fontColor);
     this.$('#font-family').val(d.fontFamily);
     this.$('#text-align').val(d.textAlign);
@@ -96,9 +102,11 @@ MEME.MemeEditorView = Backbone.View.extend({
 
   events: {
     'input #headline': 'onHeadline',
+    'input #text': 'onText',
     'input #credit': 'onCredit',
     'input #image-scale': 'onScale',
     'change #font-size': 'onFontSize',
+    'change #text-size': 'onTextSize',
     'change #font-color': 'onFontColor',
     'change #font-family': 'onFontFamily',
     'change #watermark': 'onWatermark',
@@ -120,6 +128,10 @@ MEME.MemeEditorView = Backbone.View.extend({
     this.model.set('headlineText', this.$('#headline').val());
   },
 
+  onText: function() {
+    this.model.set('MainText', this.$('#text').val());
+  },
+
   onTextAlign: function() {
     this.model.set('textAlign', this.$('#text-align').val());
   },
@@ -137,6 +149,10 @@ MEME.MemeEditorView = Backbone.View.extend({
 
   onFontSize: function() {
     this.model.set('fontSize', this.$('#font-size').val());
+  },
+
+  onTextSize: function() {
+    this.model.set('TextSize', this.$('#text-size').val());
   },
 
   onFontColor: function() {
