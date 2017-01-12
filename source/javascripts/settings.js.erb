@@ -5,7 +5,7 @@ var MEME_SETTINGS = {
 
   // Universal font family for texts:
   // Note that you'll need to included quoted font names as you would in CSS, ie: '"Knockout 28 B"'.
-  fontFamily: 'UnitSlabPro',
+  fontFamily: 'Graphik',
   // Font family options: set to empty array to disable font selector.
   // These options may also be formatted as {text:'Knockout', value:'"Knockout 28 B"'}.
   fontFamilyOpts: [
@@ -15,8 +15,7 @@ var MEME_SETTINGS = {
       'CorpidOTLight',
       'Bebas Neue',
       'GibsonLight',
-      'Graphik',
-      'Graphik-Light'
+      'Graphik'
   ],
 
   // Font size of main headline:
@@ -61,13 +60,13 @@ var MEME_SETTINGS = {
     {text: 'Facebook [1200x630]', value: "1200x630"},
     // Instagram guidelines: http://blog.instagram.com/post/10444123475/v20
     {text: 'Instagram [612x612]', value: "612x612"},
-    {text: 'Metro webb [1366x683]', value: "1366x683"},
+    {text: 'Metro webb [1210x680]', value: "1210x680"},
     {text: 'Facebook hög [736x1128]', value: "736x1128"},
   ],
 
   imageScale: 1, // Background image scale.
   imageSrc: '', // Default background image path. MUST reside on host domain, or use base64 data.
-  overlayAlpha: 0.5, // Opacity of image overlay.
+  overlayAlpha: 0.3, // Opacity of image overlay.
 
   // Image background color, or blank ('') for no overlay:
   backgroundColor: '#000',
@@ -112,6 +111,7 @@ var MEME_SETTINGS = {
     {text: 'Metro vit', value: '<%= image_path("metrovit.png") %>', data: ''},
     {text: 'Metro svart', value: '<%= image_path("metrosvart.png") %>', data: ''},
     {text: 'Metro jobb', value: '<%= image_path("metrojobb.png") %>', data: ''},
+    {text: 'Metro förklarar', value: '<%= image_path("metroforklarar.png") %>', data: ''},
     {text: 'Ingen', value: '', data:''}
   ],
 
