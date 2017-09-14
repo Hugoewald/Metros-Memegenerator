@@ -2,7 +2,7 @@ var MEME_SETTINGS = {
   creditText: '', // Default "credits" text.
   creditSize: 12, // Font size for credit text.
   downloadName: 'meme', // The name of the downloaded image file (will have a ".png" extension added).
-
+  aspectRatio: "1200x630",
   // Universal font family for texts:
   // Note that you'll need to included quoted font names as you would in CSS, ie: '"Knockout 28 B"'.
   fontFamily: 'Graphik',
@@ -56,13 +56,7 @@ var MEME_SETTINGS = {
   width: 880, // Canvas rendering width.
 
   aspectRatioOpts:[
-    {text: 'Twitter [880x480]', value: "880x480"},
-    // Facebook guidelines: https://developers.facebook.com/docs/sharing/best-practices
     {text: 'Facebook [1200x630]', value: "1200x630"},
-    // Instagram guidelines: http://blog.instagram.com/post/10444123475/v20
-    {text: 'Instagram [612x612]', value: "612x612"},
-    {text: 'Metro webb [1210x680]', value: "1210x680"},
-    {text: 'Facebook hög [736x1128]', value: "736x1128"},
   ],
 
   imageScale: 1, // Background image scale.
@@ -94,7 +88,7 @@ var MEME_SETTINGS = {
   textShadow: false, // Text shadow toggle.
   textShadowEdit: true, // Toggles text shadow control within the editor.
   watermarkAlpha: 1, // Opacity of watermark image.
-  watermarkMaxWidthRatio: 0.20, // Maximum allowed width of watermark (percentage of total canvas width).
+  watermarkMaxWidthRatio: 1, // Maximum allowed width of watermark (percentage of total canvas width).
 
   // Path to the watermark image source, or blank for no watermark:
   // Alternatively, use '<%= asset_data_uri("vox.png") %>' to populate the watermark with base64 data, avoiding Cross-Origin issues.
@@ -106,13 +100,13 @@ var MEME_SETTINGS = {
   watermarkOpts: [
     {text: 'Metro', value: '<%= image_path("metro.png") %>', data: ''},
     {text: 'Viralgranskaren', value: '<%= image_path("VG.png") %>', data: ''},
-    {text: 'Ah-Ha!', value: '<%= image_path("Ahha.png") %>', data: ''},
+    {text: 'Metro mode', value: '<%= image_path("metromode.png") %>', data: ''},
     {text: 'Metro TV', value: '<%= image_path("metrotv.png") %>', data: ''},
     {text: 'Metro sport', value: '<%= image_path("metrosport.png") %>', data: ''},
-    {text: 'Metro vit', value: '<%= image_path("metrovit.png") %>', data: ''},
-    {text: 'Metro svart', value: '<%= image_path("metrosvart.png") %>', data: ''},
-    {text: 'Metro jobb', value: '<%= image_path("metrojobb.png") %>', data: ''},
-    {text: 'Metro förklarar', value: '<%= image_path("metroforklarar.png") %>', data: ''},
+    {text: 'Native', value: '<%= image_path("metronative.png") %>', data: ''},
+    {text: 'Nöje', value: '<%= image_path("metronoje.png") %>', data: ''},
+    {text: 'Debatt', value: '<%= image_path("metrodebatt.png") %>', data: ''},
+    {text: 'Lifestyle', value: '<%= image_path("metrolifestyle.png") %>', data: ''},
     {text: 'Ingen', value: '', data:''}
   ],
 
