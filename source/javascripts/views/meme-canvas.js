@@ -256,7 +256,7 @@ MEME.MemeCanvasView = Backbone.View.extend({
       ctx.textBaseline = 'bottom';
       ctx.textAlign = 'left';
       ctx.fillStyle = d.fontColor;
-      ctx.font = 'normal 14pt UnitSlabPro';
+      ctx.font = 'normal 14pt Graphik';
       ctx.fillText(d.creditText, padding, d.height - padding);
     }
 

@@ -1,8 +1,7 @@
 var MEME_SETTINGS = {
   creditText: '', // Default "credits" text.
   creditSize: 12, // Font size for credit text.
-  downloadName: 'meme', // The name of the downloaded image file (will have a ".png" extension added).
-  aspectRatio: "1200x630",
+  downloadName: 'bild', // The name of the downloaded image file (will have a ".png" extension added).
   // Universal font family for texts:
   // Note that you'll need to included quoted font names as you would in CSS, ie: '"Knockout 28 B"'.
   fontFamily: 'Graphik',
@@ -20,7 +19,7 @@ var MEME_SETTINGS = {
   ],
 
   // Font size of main headline:
-  fontSize: 36,
+  fontSize: 48,
   // Font size options: set to empty array to disable font-size selector.
   fontSizeOpts: [
     {text: 'Liten rubriktext', value: 14},
@@ -45,35 +44,31 @@ var MEME_SETTINGS = {
   fontColorOpts: [
     {text: 'Vit', value: '#fff'},
     {text: 'Svart', value: '#000'},
-    {text: 'Orange', value: '#ED8522'},
-    {text: 'Magenta', value: '#d5007d'},
-    {text: 'Metrojobb', value: '#E32285'},
 
   ],
 
-  headlineText: 'Skriv din rubrik!', // Default headline text.
-  height: 480, // Canvas rendering height.
-  width: 880, // Canvas rendering width.
+  headlineText: '', // Default headline text.
+  height: 630, // Canvas rendering height.
+  width: 1200, // Canvas rendering width.
 
   aspectRatioOpts:[
     {text: 'Facebook [1200x630]', value: "1200x630"},
   ],
-
   imageScale: 1, // Background image scale.
   imageSrc: '', // Default background image path. MUST reside on host domain, or use base64 data.
   overlayAlpha: 0.3, // Opacity of image overlay.
 
   // Image background color, or blank ('') for no overlay:
-  backgroundColor: '#000',
+  backgroundColor: '#2b2b2b',
   // Background color options: set to empty array to disable background options selector. LAT colors below.
-  backgroundColorOpts: ['#007F3D','#ED8522', '#F4E007','#E0584E','#000','#FAD0D1', '#9BB6D4','#7DDDC5', '#DECCBE', '#AF64A9','#183C6C','#7A1E34','#054087', '#E32285','#343F38' ],
+  backgroundColorOpts: ['#2b2b2b','#e8e8e8', '#009698','#6f1758','#ef9700','#d11600', '#4e7794','#0b8072', '#f8c800', '#0a0a0a','#68afc1'],
   paddingRatio: 0.06, // Percentage of canvas width to use as edge padding.
 
 
   // Image overlay color, or blank ('') for no overlay:
   overlayColor: '',
   // Overlay color options: set to empty array to disable overlay options selector.
-  overlayColorOpts: ['#007F3D','#ED8522', '#F4E007','#E0584E','#000','#FAD0D1', '#9BB6D4','#7DDDC5', '#DECCBE', '#AF64A9','#183C6C','#7A1E34','#054087','#E32285','#343F38'],
+  overlayColorOpts: ['#2b2b2b','#e8e8e8', '#009698','#6f1758','#ef9700','#d11600', '#4e7794','#0b8072', '#f8c800', '#0a0a0a','#68afc1'],
   paddingRatio: 0.06, // Percentage of canvas width to use as edge padding.
 
   // Text alignment: valid settings are "left", "center", and "right".
